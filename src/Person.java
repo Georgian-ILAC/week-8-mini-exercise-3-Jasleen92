@@ -1,6 +1,6 @@
 public class Person {
-    private  String firstName;
-    private  String lastName;
+    private String firstName;
+    private String lastName;
     private double height;
 
     public Person(String firstName, String lastName) {
@@ -16,20 +16,25 @@ public class Person {
         return lastName;
     }
 
-    private double getHeight(){
+    public double getHeight() {
         return height;
     }
 
-    public void setFirstName(String firstName){
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public void setLastName(String lastName){
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    private void setHeight(double height){
-        this.height=height;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
+    // Override toString method
+    @Override
+    public String toString() {
+        return String.format("Name: %s %s%n", firstName, lastName);
+    }
 }
